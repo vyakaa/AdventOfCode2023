@@ -9,7 +9,7 @@ namespace Day1
         [Test]
         public void Part_1()
         {
-            var path = @$"{Environment.CurrentDirectory}\1-trebuchet.txt";
+            var path = $"1-trebuchet.txt";
             var fileContent = File.ReadAllLines(path, Encoding.UTF8);
 
             int count = 0;
@@ -27,7 +27,7 @@ namespace Day1
         [Test]
         public void Part_2_with_regex_found_on_Reddit()
         {
-            var path = @$"{Environment.CurrentDirectory}\1-trebuchet.txt";
+            var path = $"1-trebuchet.txt";
             var fileContent = File.ReadAllLines(path, Encoding.UTF8);
 
             var dictionary = new Dictionary<string, int> {
