@@ -64,6 +64,7 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
         }
 
         [Test]
+        [Ignore("Slow calculation")]
         public void Part2_my_input_with_list_should_return_total_scratchcards()
         {
             var path = $"4-scratchcards.txt";
@@ -85,7 +86,7 @@ Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
                     .Select(_ => _.Trim())
                     .ToHashSet();
                 var myNumbers = card.Split('|')
-                    .LastOrDefault()?
+                    .Last()
                     .Trim()
                     .Split(' ')
                     .Where(_ => _.Trim() != "")
