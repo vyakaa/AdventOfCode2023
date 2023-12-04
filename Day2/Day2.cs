@@ -9,8 +9,14 @@ namespace Day2
         public void Part1_test_input_should_return_correct_games_ids_sum()
         {
             (int redToPlay, int greenToPlay, int blueToPlay) toPlay = (12, 13, 14);
-            var input = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green\r\nGame 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue\r\nGame 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red\r\nGame 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red\r\nGame 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
-            var lines = input.Replace("\r", "").Split('\n');
+            var input = @"
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+";
+            var lines = input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
 
             int sum = 0;
 
@@ -47,8 +53,14 @@ namespace Day2
         [Test]
         public void Part2_test_input_should_return_correct_power_per_game()
         {
-            var input = "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green\r\nGame 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue\r\nGame 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red\r\nGame 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red\r\nGame 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green";
-            var lines = input.Replace("\r", "").Split('\n');
+            var input = @"
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+";
+            var lines = input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries);
             var expectedPowerPerGame = new[] { 48, 12, 1560, 630, 36 };
             var index = 0;
 

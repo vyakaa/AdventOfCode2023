@@ -9,8 +9,19 @@ namespace Day3
         [Test]
         public void Part1_test_input_should_return_correct_adjacent_numbers_sum()
         {
-            var input = "467..114..\r\n...*......\r\n..35..633.\r\n......#...\r\n617*......\r\n.....+.58.\r\n..592.....\r\n......755.\r\n...$.*....\r\n.664.598..";
-            var lines = input.Replace("\r", "").Split('\n').ToList();
+            var input = @"
+467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..
+";
+            var lines = input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries).ToList();
             int expectedSum = 4361;
 
             int sum = CountAdjacentNumbers(lines);
@@ -31,8 +42,19 @@ namespace Day3
         [Test]
         public void Part2_test_input_should_return_correct_multiplication_adjacent_numbers_sum()
         {
-            var input = "467..114..\r\n...*......\r\n..35..633.\r\n......#...\r\n617*......\r\n.....+.58.\r\n..592.....\r\n......755.\r\n...$.*....\r\n.664.598..";
-            var lines = input.Replace("\r", "").Split('\n').ToList();
+            var input = @"
+467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..
+";
+            var lines = input.Split(Environment.NewLine, StringSplitOptions.RemoveEmptyEntries).ToList();
             int expectedSum = 467835;
 
             int sum = CountMultiplicationAdjacentNumbers(lines);
